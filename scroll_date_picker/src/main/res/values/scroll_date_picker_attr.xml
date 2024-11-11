@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ScrollDatePicker">
+        <attr name="selected_color" format="color"/>
+        <attr name="unselected_color" format="color"/>
+        <attr name="today_date_color" format="color"/>
+        <attr name="day_name_color" format="color"/>
+        <attr name="month_name_color" format="color"/>
+        <attr name="day_number_color" format="color"/>
+
+        <attr name="today_button_color" format="color"/>
+        <attr name="today_button_text_color" format="color"/>
+
+        <attr name="full_date_color" format="color"/>
+        <attr name="full_date_under_line_color" format="color"/>
+
+        <attr name="scroll_background" format="color"/>
+    </declare-styleable>
+</resources>

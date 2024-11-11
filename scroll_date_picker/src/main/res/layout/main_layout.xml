@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/full_date_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:padding="3dp"
+        android:textSize="14sp"
+        android:textColor="@color/full_date_text"
+        app:layout_constraintBottom_toBottomOf="@id/today_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/today_button"
+        tools:text="full date" />
+
+    <FrameLayout
+        android:id="@+id/full_date_under_line"
+        app:layout_constraintStart_toStartOf="@id/full_date_text_view"
+        app:layout_constraintEnd_toEndOf="@id/full_date_text_view"
+        app:layout_constraintTop_toBottomOf="@id/full_date_text_view"
+        android:layout_width="0dp"
+        android:background="@color/full_date_under_line"
+        android:layout_height="2dp"
+        app:dividerThickness="2dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/today_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="3dp"
+        app:cardBackgroundColor="@color/today_button"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/today_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/today_button"
+            android:textColor="@color/today_button_text"
+            android:textSize="15dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/date_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:background="@color/scroll_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/full_date_text_view"
+        tools:itemCount="100"
+        tools:listitem="@layout/date_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="today_button">#565656</color>
+    <color name="today_button_text">#FFFFFF</color>
+
+    <color name="full_date_text">#FFFFFF</color>
+    <color name="full_date_under_line">#FFDD56</color>
+
+    <color name="selected_date">#ffff00ff</color>
+    <color name="unselected_date">#ffaaaaaa</color>
+    <color name="today_date">#ff333333</color>
+
+    <color name="day_number">#FFFFFF</color>
+    <color name="day_name">#FFE5BB</color>
+    <color name="month_name">#FFE5BB</color>
+
+    <color name="scroll_box">#00000000</color>
+</resources>
