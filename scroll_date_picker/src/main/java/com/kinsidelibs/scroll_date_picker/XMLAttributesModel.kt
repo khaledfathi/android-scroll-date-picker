@@ -1,6 +1,8 @@
 package com.kinsidelibs.scroll_date_picker
 
 import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
+import androidx.annotation.IdRes
 
 
 /**
@@ -21,4 +23,7 @@ internal data class XMLAttributesModel(
      @ColorInt var dayNameColor: Int,
      @ColorInt var monthNameColor: Int,
      @ColorInt var dayNumberColor: Int,
+
+     @ColorRes var selectedColorId: Int,
+     @ColorRes var unselectedColorId: Int,
 )

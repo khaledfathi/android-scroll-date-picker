@@ -137,7 +137,7 @@ class ScrollDatePicker(context: Context, attr: AttributeSet?) : FrameLayout(cont
                             ?.setCardBackgroundColor(
                                 ContextCompat.getColor(
                                     context,
-                                    R.color.selected_date
+                                    _xmlAttributeModel.selectedColorId
                                 )
                             )
                         todayHolder?.setIsRecyclable(false)
@@ -146,7 +146,7 @@ class ScrollDatePicker(context: Context, attr: AttributeSet?) : FrameLayout(cont
                             ?.setCardBackgroundColor(
                                 ContextCompat.getColor(
                                     context,
-                                    R.color.unselected_date
+                                    _xmlAttributeModel.unselectedColorId
                                 )
                             )
                     }
@@ -156,6 +156,7 @@ class ScrollDatePicker(context: Context, attr: AttributeSet?) : FrameLayout(cont
             _adapter.selectTodayItem()
         }
     }
+
     /***** -END- Events *****/
 
 
@@ -290,6 +291,14 @@ class ScrollDatePicker(context: Context, attr: AttributeSet?) : FrameLayout(cont
             dayNumberColor = arr.getColor(
                 R.styleable.ScrollDatePicker_day_number_color,
                 ContextCompat.getColor(context, R.color.day_number)
+            ),
+            selectedColorId = arr.getResourceId(
+                R.styleable.ScrollDatePicker_selected_color,
+                R.color.selected_date
+            ),
+            unselectedColorId = arr.getResourceId(
+                R.styleable.ScrollDatePicker_unselected_color,
+                R.color.unselected_date
             ),
         )
         //---for mainlayout
